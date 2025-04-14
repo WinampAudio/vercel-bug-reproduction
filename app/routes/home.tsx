@@ -1,13 +1,13 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Form } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+export function action() {
+  return { status: "success" };
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <Form method="post">
+      <button type="submit">Click Here</button>
+    </Form>
+  );
 }
